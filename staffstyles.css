@@ -1,0 +1,232 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d0eafc);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #4caf50;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Header with emojis only, no star gif now */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.header span {
+  margin: 0 10px;
+  animation: shimmer 3s infinite;
+}
+
+/* Animate emojis for shimmer effect */
+@keyframes shimmer {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #4caf50; }
+  50% { text-shadow: 0 0 15px #fff, 0 0 20px #4caf50; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #4caf50; }
+}
+
+/* Message section styling */
+.message-section {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Instructions with animated color change for each list item */
+.instructions {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Each list item styled as small box with border and padding */
+.instructions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.instructions li {
+  background-color: #e0f7fa;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  color: #444;
+  /* Animation delay will be set via JavaScript */
+}
+
+/* Animation keyframes for sequential color change top to bottom and bottom to top */
+@keyframes colorChangeSequential {
+  0% { color: #444; }
+  10% { color: #ff5722; }
+  20% { color: #444; }
+  30% { color: #ff5722; }
+  40% { color: #444; }
+  50% { color: #ff5722; }
+  60% { color: #444; }
+  70% { color: #ff5722; }
+  80% { color: #444; }
+  90% { color: #ff5722; }
+  100% { color: #444; }
+}
+
+/* To make each list item animate sequentially, assign individual delays via JavaScript */
+
+/* Suggestion section styling */
+.suggestion-section {
+  width: 90%;
+  max-width: 800px;
+  background: #fff8e1;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.suggestion-section img {
+  width: 100px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.suggestion-btn {
+  padding: 12px 25px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.suggestion-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Staff list styling, small boxes with animations */
+.staff-list {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.staff-member {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px 20px;
+  min-width: 150px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+}
+
+/* Animate each staff member with delay */
+.staff-member:nth-child(1) { animation-delay: 0.2s; opacity: 1; }
+.staff-member:nth-child(2) { animation-delay: 0.4s; opacity: 1; }
+.staff-member:nth-child(3) { animation-delay: 0.6s; opacity: 1; }
+.staff-member:nth-child(4) { animation-delay: 0.8s; opacity: 1; }
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Name styling with fade-in-up animation */
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Message below the list */
+.join-message {
+  margin-top: 30px;
+  background: #ffe0b2;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+/* Responsive adjustments */
+@media(max-width: 600px){
+  h1 {
+    font-size: 2em;
+  }
+  .staff-member {
+    min-width: 100px;
+    font-size: 1em;
+  }
+  .instructions {
+    font-size: 1em;
+  }
+  .join-message {
+    font-size: 1em;
+  }
+}

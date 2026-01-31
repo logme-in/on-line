@@ -1,0 +1,73 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Body with pastel background */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Login box styles */
+#login-box {
+  background: linear-gradient(135deg, #ffe0f0, #ffd1dc);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+#login-box h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ff69b4;
+}
+#username, #password {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  background: #fff0f5;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease;
+}
+#username:focus, #password:focus {
+  outline: none;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+}
+#login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  background: #ff69b4;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+}
+#login-btn:hover {
+  background: #ff85c1;
+  transform: translateY(-2px);
+}
+#error-message {
+  margin-top: 10px;
+  color: red;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#error-message.show {
+  opacity: 1;
+}

@@ -1,0 +1,212 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffbf;
+  color: #555;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Banner styling */
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+/* Profile picture styling */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px; /* overlap with banner */
+  position: relative;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid pink;
+  padding: 5px;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+/* Pulsing animation for profile pic */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 pink; }
+  70% { box-shadow: 0 0 0 10px rgba(255, 192, 203, 0); }
+  100% { box-shadow: 0 0 0 0 pink; }
+}
+
+/* Name styling */
+.name {
+  margin-top: 15px;
+  font-size: 2em;
+  font-family: 'ꜱᴍɪʟᴇツᴄʜᴀᴛ'; /* Keep your font as specified */
+  color: #c71585;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+/* About Me section */
+.about-section {
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.about-heading {
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #ADD8E6; /* Light blue color for "About Me" */
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Always animated underline below About Me heading */
+.about-heading::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #ff69b4;
+  width: 100%;
+  border-radius: 2px;
+  animation: moveUnderline 2s linear infinite;
+}
+
+@keyframes moveUnderline {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+/* About Me text */
+.about-text {
+  font-weight: normal;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.small-text {
+  font-size: 0.9em;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Buttons styling */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Important message */
+.important-message {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffe4e1;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1em;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Extra space for additional banner-like image */
+.extra-banner-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px; /* space around it */
+}
+
+.extra-banner-container .banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+/* Chat button (floating) */
+#chatBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2em;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1000;
+}
+
+#chatBtn:hover {
+  background-color: #ff85c1;
+  transform: scale(1.1);
+}
+
+/* Responsive styling */
+@media(max-width: 768px){
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .name {
+    font-size: 1.5em;
+  }
+  .about-heading {
+    font-size: 1.5em;
+  }
+  .important-message {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
