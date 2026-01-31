@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chat Under Development</title>
+<!-- Google Fonts for stylish and easy-to-read font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset default margins and paddings */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    background-color: #ffffbf;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Container for the content */
+  .container {
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 90%;
+    width: 400px;
+    animation: pulse 2s infinite;
+  }
+
+  /* Main heading */
+  h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+
+  /* Subtext */
+  p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  /* Status animation */
+  .status {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ff6600;
+    margin-top: 15px;
+    animation: bounce 1.5s infinite alternate;
+  }
+
+  /* Keyframes for pulse animation */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  /* Keyframes for bounce animation */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px 15px;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+
+    .status {
+      font-size: 1.1em;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Our Chat is Under Development</h1>
+    <p>We're working hard to bring it back soon. Stay tuned!</p>
+    <div class="status">🚧 Coming Soon! 🚧</div>
+  </div>
+</body>
+</html>
